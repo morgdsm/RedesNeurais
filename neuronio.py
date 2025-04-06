@@ -49,7 +49,7 @@ X_teste, Y_teste = X[tamanho_treino:], Y[tamanho_treino:]
 def degrau_bipolar(u):
     return 1 if u > 0 else -1 if u < 0 else 0
 
-def treino_neuronio(X, Yd, taxa_aprendizado=0.1, max_epocas=100):
+def treino_neuronio(X, Yd, taxa_aprendizado=0.1, max_epocas=1000):
     pesos = [random.uniform(-1, 1) for _ in range(len(X[0]))]
     for epoca in range(max_epocas):
         erro_total = 0
